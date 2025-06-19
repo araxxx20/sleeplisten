@@ -5,40 +5,90 @@ void main() {
     home: Scaffold(
       appBar: AppBar(
         title: Text('SleepListen'),
-        backgroundColor: Colors.pink[200]
+        backgroundColor: Colors.pink[200],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              'Sleeptime',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.black45,
-              ),
-            ),
-            Text(
-              'Best Ever Nap',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.black45,
-              ),
-            ),
-            Text(
-              'Best Music',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.black45,
+      body: Column(
+        children: [
 
-              ),
+          Container(
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            child: Row(
+              children: [
+                Text(
+                  'Name:',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                Text(
+                  'Ara L. Hernandez',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.pink[300]
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+
+
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            child: Row(
+              children: [
+                Text(
+                  'Age:',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                Text(
+                  '21 years old',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                      color: Colors.pink[300]
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+
+          Container(
+            margin: EdgeInsets.fromLTRB(70, 10, 15, 10),
+            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            child: Row(
+              children: [
+                Text(
+                  'Gender:',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+
+                  ),
+                ),
+                Text(
+                  'Female',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                      color: Colors.pink[300]
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+        ],
       ),
     ),
   ));
