@@ -5,10 +5,12 @@ import 'package:my_sleeplistenapp/pages/ListItems.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    initialRoute: '/dashboard',
     routes: {
-      '/' : (context) => Listitems(),
-      '/add' : (context) => Addmusic(),
+      '/dashboard': (context) => const Dashboard(),
+      '/list': (context) => const Listitems(),
+      '/add': (context) => const Addmusic(),
     },
   ));
 }
-
