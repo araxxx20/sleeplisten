@@ -9,27 +9,15 @@ class WorldTime{
   WorldTime({required this.location, required this.url});
 
   Future<void> getTime() async {
-
-    // make request
+  try {
     Response response = await get(Uri.parse('https://timeapi.io/api/Time/current/zone?timeZone=Europe/London'));
     Map data = jsonDecode(response.body);
-    //print(data);
-
-    //get properties from data
-
-    String datetime = data['datetime'];
-    String offset = data['utc_offset'];
-    //print(datetime );
-    //print(offset);
-
-    // create datetime object
-    DateTime now = DateTime.parse(datetime);
-    now = now.add(Duration(hours: int.parse(offset)));
-
-    //set the time property
-    time = now.toString();
-
+    time = "${data['date']} ${data['time']}"; // e.g. "06/08/2024 13:45"
+  } catch (e) {
+    print('Error getting time: ' + e.toString());
+    time = 'Could not get time data';
   }
+}
 
 }
 
