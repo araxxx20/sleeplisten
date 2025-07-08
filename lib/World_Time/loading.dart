@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'dart:convert';
 import '../services/world_time.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+
 class Loading extends StatefulWidget {
   const Loading({super.key});
 
@@ -35,13 +37,13 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(50.0),
-          child: Text(
-            isLoading ? 'loading' : time,
-            style: TextStyle(fontSize: 24),
-          ),
+      backgroundColor: Colors.pink[100],
+      body: Center(
+        child: SpinKitPouringHourGlass(
+          color: Colors.pink,
+          size: 100.0,
 
+      ),
       ),
     );
   }
